@@ -1,11 +1,12 @@
-DOCTMP_NAME = LTKdoc
-DOCTMP_VERSION = 0.1
-DOCTMP_FULL = $(DOCTMP_NAME) $(DOCTMP_VERSION)
+THEME_NAME = LTKdoc
+THEME_VERSION = 0.1
+THEME_FULL = $(THEME_NAME) $(THEME_VERSION)
+THEME_URL = https://github.com/kyllingstad/ltkdoc
 DDOC = <!DOCTYPE html>
     <html>
         <head>
             <meta charset="UTF-8">
-            <meta name="generator" content="DMD with DDOC theme $(DOCTMP_FULL)">
+            <meta name="generator" content="DMD with DDOC theme $(THEME_FULL)">
             <title>$(TITLE)</title>
             <style type="text/css">
                 /* Common styles */
