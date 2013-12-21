@@ -1,0 +1,111 @@
+DOCTMP_NAME = LTKdoc
+DOCTMP_VERSION = 0.1
+DOCTMP_FULL = $(DOCTMP_NAME) $(DOCTMP_VERSION)
+DDOC = <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="generator" content="DMD with DDOC theme $(DOCTMP_FULL)">
+            <title>$(TITLE)</title>
+            <style type="text/css">
+                /* Common styles */
+                body {
+                    font-family: sans-serif;
+                    font-size: 100.01%;
+                }
+                /* For an explanation of the font-family property value, see:
+                   http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+                   Basically, it ensures monospace fonts are sized according to
+                   the same scale as other fonts, without imposing a fixed size.
+                */
+                code {
+                    font-family: "Nothing to see here, move on",monospace,sans-serif;
+                    font-size: 95%;
+                    font-weight: bold;
+                }
+                h1 {
+                    font-size: 100%;
+                    font-weight: bold;
+                    padding: 0;
+                    margin: 1ex 0;
+                }
+                p {
+                    font-size: 100%;
+                    padding: 0;
+                    margin: 1ex 0;
+                }
+                div.ddoc_paragraphs {
+                    font-size: 100%;
+                    margin: 1ex 0;
+                    padding: 0;
+                }
+                .warning {
+                    color: Red;
+                }
+
+                /* Section-specific style */
+                section.module>h1 {
+                    border-bottom: 1px solid Gray;
+                    font-size: 150%;
+                }
+                section.ddoc_section h1 {
+                    margin: 1ex 0 0 0;
+                }
+                section.members>h1 {
+                    display: none;
+                }
+                section.member {
+                    border: 1px solid Gray;
+                    margin-bottom: 1ex;
+                }
+                section.member>* {
+                    margin-left: 2em;
+                    margin-right: 1em;
+                }
+                section.member>h1 {
+                    background-color: LightBlue;
+                    border-bottom: 1px solid Gray;
+                    font-size: 100%;
+                    margin: 0 0 0 0;
+                    padding: 0.5ex 0.5em;
+                    text-align: left;
+                }
+                pre.d_code {
+                    background-color: LightGrey;
+                    padding: 0.5em;
+                }
+            </style>
+        </head>
+        <body>
+            <section class="module">
+                <h1>$(TITLE)</h1>
+                $(BODY)
+            </section>
+        </body>
+    </html>
+D_PSYMBOL = $0
+D_PARAM = $0
+DDOC_PSYMBOL = $0
+DDOC_PARAM = $0
+DDOC_SUMMARY = <p class="summary">$0</p>
+DDOC_DESCRIPTION = <div class="ddoc_paragraphs">$0</div>
+DDOC_DECL = <section class="member"><h1><code>$0</code></h1>
+DDOC_DECL_DD = $0</section>
+DDOC_SECTION_H = <h1>$0</h1><div class="ddoc_paragraphs">
+DDOC_SECTION = <section class="ddoc_section">$0</div></section>
+LTKDOC_PRESEC   = $(DDOC_SECTION $(DDOC_SECTION_H $1:) $+)
+LTKDOC_PRESEC_W = $(DDOC_SECTION $(DDOC_SECTION_H <span class="warning">$1:</span>) $+)
+DDOC_AUTHORS    = $(LTKDOC_PRESEC Authors,$0)
+DDOC_BUGS       = $(LTKDOC_PRESEC_W BUGS,$0)
+DDOC_COPYRIGHT  = $(LTKDOC_PRESEC Copyright,$0)
+DDOC_DATE       = $(LTKDOC_PRESEC Date,$0)
+DDOC_DEPRECATED = $(LTKDOC_PRESEC_W Deprecated,$0)
+DDOC_EXAMPLES   = $(LTKDOC_PRESEC Examples,$0)
+DDOC_HISTORY    = $(LTKDOC_PRESEC History,$0)
+DDOC_LICENSE    = $(LTKDOC_PRESEC Licence,$0)
+DDOC_RETURNS    = $(LTKDOC_PRESEC Returns,$0)
+DDOC_SEE_ALSO   = $(LTKDOC_PRESEC See also,$0)
+DDOC_STANDARDS  = $(LTKDOC_PRESEC Standards,$0)
+DDOC_THROWS     = $(LTKDOC_PRESEC Throws,$0)
+DDOC_VERSION    = $(LTKDOC_PRESEC Version,$0)
+DDOC_MEMBERS    = <section class="members"><h1>Members</h1>$0</section>
