@@ -10,4 +10,5 @@ like this:
 
     dmd -D my_module.ddoc /path/to/ltk.ddoc
 
-Author: [Lars T. Kyllingstad](https://github.com/kyllingstad)
+LTKdoc is created by [Lars T. Kyllingstad](https://github.com/kyllingstad),
+and placed in the public domain.
