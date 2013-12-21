@@ -81,6 +81,11 @@ DDOC = <!DOCTYPE html>
             <section class="module">
                 <h1>$(TITLE)</h1>
                 $(BODY)
+                <footer>
+                    <div class="ddoc_paragraphs">$(COPYRIGHT)</div>
+                    <p>This documentation was generated on $(DATETIME) with
+                       $(LINK2 $(THEME_URL),$(THEME_FULL)).</p>
+                </footer>
             </section>
         </body>
     </html>
