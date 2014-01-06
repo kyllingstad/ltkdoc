@@ -10,7 +10,7 @@ modules.
 To use it, simply provide the compiler with the path to the `ltk.ddoc` file
 when compiling the module(s) you'd like to document, like this:
 
-    dmd -D my_module.ddoc /path/to/ltk.ddoc
+    dmd -D my_module.d /path/to/ltk.ddoc
 
-LTKdoc is created by [Lars T. Kyllingstad](https://github.com/kyllingstad),
+LTKdoc was created by [Lars T. Kyllingstad](https://github.com/kyllingstad),
 and placed in the public domain.
